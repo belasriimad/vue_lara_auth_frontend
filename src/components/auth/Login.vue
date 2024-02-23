@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-  import { onMounted, onUnmounted, reactive } from "vue"
+  import { onUnmounted, reactive } from "vue"
   import router from '../../router'
   import { useAuthStore } from '../../stores/useAuthStore.js'
   import axios from 'axios'
@@ -85,10 +85,6 @@
       console.log(error);
     }
   }
-
-  onMounted(() => {
-    store.clearErrors()
-  })
   
   onUnmounted(() => store.clearErrors())
 </script>
